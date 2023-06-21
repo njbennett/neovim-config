@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+set -euo pipefail
+
+ln -sf ./init.lua ~/.config/nvim/init.lua
