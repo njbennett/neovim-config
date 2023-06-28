@@ -2,4 +2,5 @@
 
 set -euo pipefail
 
-ln -sf ./init.lua ~/.config/nvim/init.lua
+ln -sf "$(realpath)/init.lua" ~/.config/nvim/init.lua
+ln -sf "$(realpath)/lazy-lock.json" ~/.config/nvim/lazy-lock.json
