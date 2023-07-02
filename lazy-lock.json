@@ -1,4 +1,5 @@
 {
   "NeoSolarized": { "branch": "master", "commit": "b94b1a9ad51e2de015266f10fdc6e142f97bd617" },
-  "lazy.nvim": { "branch": "main", "commit": "4c8b625bc873ca76b76eee0c28c98f1f7148f17f" }
+  "lazy.nvim": { "branch": "main", "commit": "4c8b625bc873ca76b76eee0c28c98f1f7148f17f" },
+  "nvim-treesitter": { "branch": "master", "commit": "3fde1587d0850d46b5a1473e5d1e59254e947496" }
 }

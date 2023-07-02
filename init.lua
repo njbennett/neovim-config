@@ -16,8 +16,20 @@ vim.opt.rtp:prepend(lazypath)
 --- load plugins
 plugins = {
   { 'overcache/NeoSolarized' },
+  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'}
 }
 require("lazy").setup(plugins)
+
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = {
+    "eex",
+    "elixir",
+    "erlang",
+    "heex",
+    "html"
+  },
+  highlight = { enable = true},
+}
 
 --- set line numbers for pairing
 vim.opt.number = true
