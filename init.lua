@@ -15,8 +15,8 @@ vim.opt.rtp:prepend(lazypath)
 
 --- load plugins
 plugins = {
-  { 'overcache/NeoSolarized' },
-  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'}
+  { 'AlexvZyl/nordic.nvim' },
+  { 'nvim-treesitter/nvim-treesitter', build = ":TSUpdate" }
 }
 require("lazy").setup(plugins)
 
@@ -41,4 +41,4 @@ vim.opt.syntax = "on"
 vim.opt.termguicolors = true
 
 --- set the colorscheme
-vim.cmd("colorscheme NeoSolarized")
+vim.cmd("colorscheme nordic")
