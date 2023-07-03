@@ -31,11 +31,14 @@ require'nvim-treesitter.configs'.setup {
   highlight = { enable = true},
 }
 
+--- somehow, this stops Nvim from adding a tab
+--- when it autoindents a line
+--= in addition to the spaces its copying from the above line
+vim.opt.tabstop = 2
+vim.opt.softtabestop = 2
+
 --- set line numbers for pairing
 vim.opt.number = true
-
---- enable syntax highlighting
-vim.opt.syntax = "on"
 
 --- enable 24-bit RGB colors
 vim.opt.termguicolors = true
