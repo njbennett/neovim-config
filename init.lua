@@ -35,7 +35,7 @@ require'nvim-treesitter.configs'.setup {
 --- when it autoindents a line
 --= in addition to the spaces its copying from the above line
 vim.opt.tabstop = 2
-vim.opt.softtabestop = 2
+vim.opt.softtabstop = 2
 
 --- set line numbers for pairing
 vim.opt.number = true
