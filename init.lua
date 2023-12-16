@@ -28,9 +28,34 @@ local plugins = {
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
     }
-  }
+  },
+  { "williamboman/mason.nvim" },
+  { "williamboman/mason-lspconfig.nvim" },
+  { 'neovim/nvim-lspconfig' },
 }
 require("lazy").setup(plugins)
+
+local language_servers = { 'lua_ls' }
+
+-- install LSPs with Mason
+require("mason").setup()
+require("mason-lspconfig").setup {
+	ensure_installed = language_servers,
+}
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+for _, ls in ipairs(language_servers) do
+	require('lspconfig')[ls].setup({
+		capabilities = capabilities,
+		settings = {
+			Lua = {
+				diagnostics = { globals = { 'vim' } }
+			}
+		}
+		-- you can add other fields for setting up lsp server in this table
+	})
+end
 
 --- somehow, this stops Nvim from adding a tab
 --- when it autoindents a line
