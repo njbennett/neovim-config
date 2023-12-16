@@ -14,9 +14,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 --- load plugins
-plugins = {
+local plugins = {
   { 'AlexvZyl/nordic.nvim' },
-  { 'nvim-treesitter/nvim-treesitter', build = ":TSUpdate" },
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
@@ -32,17 +31,6 @@ plugins = {
   }
 }
 require("lazy").setup(plugins)
-
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = {
-    "eex",
-    "elixir",
-    "erlang",
-    "heex",
-    "html"
-  },
-  highlight = { enable = true},
-}
 
 --- somehow, this stops Nvim from adding a tab
 --- when it autoindents a line
